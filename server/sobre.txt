@@ -1,0 +1,34 @@
+/*http://localhost:3333/users
+localhost:3333/ => Rota 
+users           => Recursos 
+
+Metodos:
+get     => buscar ou listar uma informação
+post    => Criar alguma nova informação
+put     => atualizar uma informação existente
+delete  => remover uma informação existente
+
+Parametros:
+request       => Dados para criação ou atualização de u registro
+route params  => identificar um recurso dentro alterar ou deletar dentro nossa rota
+query params  => paginação, filtros e ordenação
+
+Migrações
+migrations    => controlam a versão do banco de dados
+*/
+
+/*Casos de Uso
+
+# Funcionalidades
+
+## Conexões
+
+-Rotas para listar o total de conexões realizadas;
+-Rotas para criar uma nova conexão;
+
+## Aulas
+
+-Rotas para crirar uma aula;
+-Rotas para listar aulas;
+  -Filtrar por materia, dia da semana e horário 
+*/
