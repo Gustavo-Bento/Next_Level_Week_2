@@ -33,7 +33,7 @@ export default class ClassesController{
         .from('class_schedule')
         .whereRaw('`class_schedule`.`class_id` = `classes`.`ìd`')
         .whereRaw('`class_schedule`.`week_day` = ??', [Number(week_day)])
-        .whereRaw('´class_schedule`.`from` <=??', [timeInMinutes])
+        .whereRaw('`class_schedule`.`from` <=??', [timeInMinutes])
         .whereRaw('`class_schedule`.`to` > ??', [timeInMinutes])
       })
       .where('classes.subject', '=',subject)
@@ -53,7 +53,6 @@ export default class ClassesController{
       cost,
       schedule
     }= request.body;
-
 
     const trx = await db.transaction();
 
@@ -80,7 +79,7 @@ export default class ClassesController{
           class_id,
           week_day: scheduleItem.week_day,
           from: convertHourToMinutes(scheduleItem.from),
-          to: convertHourToMinutes(scheduleItem.to)
+          to: convertHourToMinutes(scheduleItem.to),
         };
       })
 
